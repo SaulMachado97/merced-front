@@ -1,0 +1,15 @@
+<h1>Lista de libros:</h1>
+
+<form (ngSubmit)="saveLibro(formAddLibro)" #formAddLibro="ngForm">
+  <input type="text" name="nombreLibro" ngModel required>
+  <button type="submit">Agregar libro</button>
+</form>
+
+<br>
+
+<app-libro
+  (eventLibroClicked)="deleteLibro(libro)"
+  *ngFor="let libro of libros"
+  [tituloLibro]="libro"
+>
+</app-libro>

@@ -1,0 +1,10 @@
+<h1>Hola usuario {{nombre}}</h1>
+
+<button (click)="onChangeVisible()">{{nameButton}}</button>
+
+<input *ngIf="visible" type="text" [(ngModel)]="nombre">
+<button *ngIf="visible" (click)="onAddUser()">Agregar</button>
+
+<div *ngFor="let user of usuarios">
+<h3> {{user}} </h3>
+</div>

@@ -1,0 +1,19 @@
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active{
+  color: #DBCDE6
+}
+
+.navegation-menu{
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
+}
+
+.navegation-bar{
+  padding: 10px;
+}

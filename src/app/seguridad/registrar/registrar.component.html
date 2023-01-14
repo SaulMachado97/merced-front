@@ -1,0 +1,85 @@
+<div fxLayout="row" ngxSplit="row" fxLayoutAlign="center center">
+  <form
+    fxLayout="column"
+    fxLayoutGap="10px"
+    #formRegister="ngForm"
+    (ngSubmit)="saveUsuario(formRegister)"
+  >
+    <mat-form-field>
+      <mat-label>Ingrese Nombre</mat-label>
+      <input
+        #nameInput="ngModel"
+        type="text"
+        matInput
+        placeholder="Alex"
+        ngModel
+        name="name"
+        required
+      />
+      <mat-error *ngIf="emailInput.hasError('required')">El nombre es requerido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Ingrese Apellido</mat-label>
+      <input
+        #lastNameInput="ngModel"
+        type="text"
+        matInput
+        placeholder="Lopez"
+        ngModel
+        name="lastName"
+        required
+      />
+      <mat-error *ngIf="emailInput.hasError('required')">El nombre es requerido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Ingrese Username</mat-label>
+      <input
+        #userNameInput="ngModel"
+        type="text"
+        matInput
+        placeholder="ALopez"
+        ngModel
+        name="userName"
+        required
+      />
+      <mat-error *ngIf="emailInput.hasError('required')">El username es requerido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Ingrese e-mail</mat-label>
+      <input
+        #emailInput="ngModel"
+        type="email"
+        matInput
+        placeholder="alopez@mail.com"
+        ngModel
+        name="email"
+        email
+        required
+      />
+      <mat-error *ngIf="emailInput.hasError('required')">El email es requerido</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">El email es invalida</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Ingrese contraseña</mat-label>
+      <input
+        #passwordInput="ngModel"
+        type="password"
+        matInput
+        placeholder="contraseña"
+        ngModel
+        name="password"
+        minlength="6"
+        required
+      />
+
+      <mat-error *ngIf="emailInput.hasError('required')">La contraseña es requerida</mat-error>
+      <mat-hint>Minimo 6 caracteres</mat-hint>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="formRegister.invalid">Registrar</button>
+  </form>
+</div>

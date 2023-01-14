@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <button (click)="onMenuToggleDispatch()" mat-icon-button class="example-icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Merced Libreria</span>
+  <span class="example-spacer"></span>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout="row" fxLayoutGap="30" class="navegation-menu">
+      <li *ngIf="estadoSesion"><a routerLink="/">Inicio</a></li>
+      <li *ngIf="!estadoSesion"><a routerLink="/registrar">Registrate</a></li>
+      <li *ngIf="!estadoSesion"><a routerLink="/login">Login</a></li>
+    </ul>
+  </div>
+</mat-toolbar>

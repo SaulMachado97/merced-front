@@ -1,0 +1,24 @@
+<mat-nav-list>
+  <div mat-subheader>Navegacion</div>
+  <mat-list-item class="navegation-menu" routerLink="/" (click)="menuClosedDispatch()">
+    <mat-icon matListItemIcon>home</mat-icon>
+    <li class="navegation-bar"><span>Inicio</span></li>
+  </mat-list-item>
+
+  <mat-list-item class="navegation-menu" routerLink="/registrar" (click)="menuClosedDispatch()">
+    <mat-icon matListItemIcon>book</mat-icon>
+    <li class="navegation-bar"> <span>Registrate</span> </li>
+  </mat-list-item>
+
+  <mat-list-item class="navegation-menu" routerLink="/login" (click)="menuClosedDispatch()">
+    <mat-icon matListItemIcon>person</mat-icon>
+    <li class="navegation-bar"><span>Login</span></li>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+  <div mat-subheader>Configuración</div>
+  <mat-list-item class="navegation-menu" routerLink="#" (click)="menuClosedDispatch()">
+    <mat-icon matListItemIcon>info</mat-icon>
+    <li class="navegation-bar"><span>Acerca de Merced</span></li>
+  </mat-list-item>
+</mat-nav-list>
